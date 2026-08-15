@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'data' %}"method="POST">
+            {%csrf_token%}
+            <label> first name </label>
+            <input type="text" name="fn">
+            <label> last name </label>
+            <input type="text" name="ln">
+            <input type="submit" />
+        </form>
+    </body>
+
+</html>
