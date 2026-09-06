@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "Query_para",
-    "Body_para",
+    #"Query_para",
+    #"Body_para",
     #"temp_extend",
     #"temp_include",
+    "dtltemp",
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,9 @@ ROOT_URLCONF = "djangoproj.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['Template'],
+        "DIRS": [#'Template',
+                 'Templates',],
+                 
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
