@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Query_para",
-    #"Body_para",
+    "Body_para",
     #"temp_extend",
     #"temp_include",
 ]
@@ -123,4 +123,6 @@ STATIC_URL = "static/"
 CSRF_TRUSTED_ORIGINS=[
     'https://*.app.github.dev',
     'https://localhost:8000',
+
+  
 ]
