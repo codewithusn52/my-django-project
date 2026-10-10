@@ -2,16 +2,17 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
+
         <title>
             Cores Employee Profile
         </title>
-        <body>
+        <body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlk-bQ6NxIaKH0EmET5kkpFBbqLh3uRZonQMN9kABYng&s=10); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
             {% if empdata %}
-            <h1 style="text-align:center;color:cadetblue;"> 
+            <h1 style="text-align:center;color:rgb(42, 62, 62);"> 
                 {{empdata.name|upper}}
             </h1>
-            <h3 style="text-align:center;color:cadetblue;"> EMPLOYEE DETAILS </h3>
-            <table border="2">
+            <h3 style="text-align:center;color:black ;"> EMPLOYEE DETAILS </h3>
+            <table border="2" style="margin:auto;">
                 <tr>
                     <td>EID: {{empdata.aid}} </td>
                 </tr>
@@ -29,8 +30,9 @@
                 </tr>
                     
             </table>
-            <h3 style="text-align:center;color:cadetblue;"> SKILLS </h3>
-            <ol>
+            <h3 style="text-align:center;color:rgb(41, 43, 43);"> SKILLS </h3>
+            <div style="text-align: center;">
+            <ol style="text-align: center; list-style-position: inside;">
                 {% for sk in skills %}
                 <li> {{sk}} </li>
                 {% endfor %}
@@ -39,6 +41,7 @@
             {% else %}
             <h1 style="color:red;"> NO RECORD </h1>
             {% endif %}
+            </div>
         </body>
     </head>
 </html>

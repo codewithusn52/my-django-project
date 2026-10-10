@@ -29,6 +29,7 @@ urlpatterns = [
     #path('',views.home, name='home'),
     #path('about/',views.about, name='about'),
     #path('index1/',inc_view.index1),
-    
+    path('', include('dtltemp.urls')),
+
 
 ]
