@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Cores Employee Profile
+        </title>
+        <body>
+            {% if empdata %}
+            <h1 style="text-align:center;color:cadetblue;"> 
+                {{empdata.name|upper}}
+            </h1>
+            <h3 style="text-align:center;color:cadetblue;"> EMPLOYEE DETAILS </h3>
+            <table border="2">
+                <tr>
+                    <td>EID: {{empdata.aid}} </td>
+                </tr>
+                <tr>
+                    <td>NAME: {{empdata.name}} </td>
+                </tr>
+                <tr>
+                    <td>DEPARTMENT: {{empdata.dept}} </td>
+                </tr>
+                <tr>
+                    <td>AGE: {{empdata.age}} </td>
+                </tr>
+                <tr>
+                    <td>REPORTING MANAGER: {{empdata.rep_man}} </td>
+                </tr>
+                    
+            </table>
+            <h3 style="text-align:center;color:cadetblue;"> SKILLS </h3>
+            <ol>
+                {% for sk in skills %}
+                <li> {{sk}} </li>
+                {% endfor %}
+            
+            </ol>
+            {% else %}
+            <h1 style="color:red;"> NO RECORD </h1>
+            {% endif %}
+        </body>
+    </head>
+</html>

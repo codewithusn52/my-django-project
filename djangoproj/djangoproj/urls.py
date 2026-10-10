@@ -24,10 +24,11 @@ from django.urls import path
 
 urlpatterns = [
     #path("admin/", admin.site.urls),
-    path('',include('Query_para.urls')),
-    path('',include('Body_para.urls')),
+    #path('',include('Query_para.urls')),
+    #path('',include('Body_para.urls')),
     #path('',views.home, name='home'),
     #path('about/',views.about, name='about'),
     #path('index1/',inc_view.index1),
+    
 
 ]
