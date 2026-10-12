@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     #"Body_para",
     #"temp_extend",
     #"temp_include",
-    "dtltemp",
+    #"dtltemp",
+    "formAPI",
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [#'Template',
-                 BASE_DIR /'Templates',],
+                 #BASE_DIR /'Templates',
+                 BASE_DIR /'Template_form',],
                  
         "APP_DIRS": True,
         "OPTIONS": {
