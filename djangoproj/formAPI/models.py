@@ -5,7 +5,7 @@ shifts=(('1','Morning'),
         ('2','Afternoon'),
         ('3','Evening'),
 )
-class Attendance(models, Model):
+class AttenLogs(models, Model):
     empid=models.CharField(max_length=50,required=True)
     fname=models.CharField(max_length=100,required=True)
     lname=models.CharField(max_length=100,required=True)

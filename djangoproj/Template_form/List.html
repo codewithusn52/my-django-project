@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+    <title>---------- View the records--------</title>
+    </head>
+    <body>
+        <tr>
+            <th> EMP ID: </th>
+            <th> EMPLOYEE NAME: </th>
+            <th> EMPLOYEE SHIFTS: </th>
+            <th> EMPLOYEE INTIME:  </th>
+            <th> EMPLOYEE ACTION: </th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{record.empid}}</td>
+            <td>{{record.fname}}</td>
+            <td>{{record.lname}}</td>
+            <td>{{record.shifts}}</td>
+            <td>{{record.intime}}</td>
+            <td>{{record.action}}</td>
+        </tr>
+    </body>
+        
