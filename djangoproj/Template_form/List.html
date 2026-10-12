@@ -20,6 +20,10 @@
             <td>{{record.shifts}}</td>
             <td>{{record.intime}}</td>
             <td>{{record.action}}</td>
+            <td> <a href ="{% url "Update"record.id%}"> EDIT </a></td>
+            <td> <a href ="{% url "Delete"record.id%}"> DELETE </a></td>
         </tr>
+        {% empty %}
+        <td> "DElete roes</td>
     </body>
         
