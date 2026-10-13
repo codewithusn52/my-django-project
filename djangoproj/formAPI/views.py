@@ -17,13 +17,13 @@ def create(req):
         else:
             f = forms.Attendance()
             return render(req,"insert.html",{'form':f})
-print("_________________________________________________________________________________________________________________________")
+
 
 def viewdata(req):
     rec=models.AttendLogs.object.all()
     return render (req,'List.html', {'records':rec})
 
-<<<<<<< HEAD
+
 def update(req,id):
     rec=models.AttendLogs.objects.get(id=id)
     if req.method=="POST":
@@ -52,22 +52,3 @@ def delete(req,id):
     f=forms.Attendance(req. POST)
     return render (req,'Delete.html',{'form':f})    
 
-
-
-
-
-           
-           
-
-
-
-=======
-print("_________________________________________________________________________________________________________________________")
-
-def update(req,id):
-  zeel rec=models.AttendLogs.object.get(id=id) 
-  if req.method=="POST ":
-     f=form.Attendance(req.POST) 
-     if f.d():
-        rec.empid=f.cleaned_data['empid']
->>>>>>> 1355bb509d90fe5dbda2cb9a76ab723d5dd6a80a
