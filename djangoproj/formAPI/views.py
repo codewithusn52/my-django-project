@@ -22,3 +22,12 @@ print("_________________________________________________________________________
 def viewdata(req):
     rec=models.AttendLogs.object.all()
     return render (req,'List.html', {'records':rec})
+
+print("_________________________________________________________________________________________________________________________")
+
+def update(req,id):
+  zeel rec=models.AttendLogs.object.get(id=id) 
+  if req.method=="POST ":
+     f=form.Attendance(req.POST) 
+     if f.d():
+        rec.empid=f.cleaned_data['empid']
