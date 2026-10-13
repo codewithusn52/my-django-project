@@ -22,6 +22,7 @@ from django.urls import path
 #from temp_include import views as inc_view
 
 
+
 urlpatterns = [
     #path("admin/", admin.site.urls),
     #path('',include('Query_para.urls')),
@@ -29,7 +30,8 @@ urlpatterns = [
     #path('',views.home, name='home'),
     #path('about/',views.about, name='about'),
     #path('index1/',inc_view.index1),
-    path('', include('dtltemp.urls')),
+    #path('', include('dtltemp.urls')),
+    path('', include ('formAPI.urls')),
 
 
 ]

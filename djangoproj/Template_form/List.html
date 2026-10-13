@@ -2,9 +2,10 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-    <title>---------- View the records--------</title>
+    <title> view </title>
     </head>
     <body>
+        <h2>>---------- View the records--------</h2>
         <tr>
             <th> EMP ID: </th>
             <th> EMPLOYEE NAME: </th>
@@ -24,6 +25,11 @@
             <td> <a href ="{% url "Delete"record.id%}"> DELETE </a></td>
         </tr>
         {% empty %}
-        <td> "DElete roes</td>
+        <tr>
+            <td colspan="8" style="text-align:center;"> NO RECORD TO DISPLAY </td>
+        </tr>
+        {% endfor %}
+        
     </body>
+    </html>
         
