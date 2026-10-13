@@ -23,6 +23,7 @@ def viewdata(req):
     rec=models.AttendLogs.object.all()
     return render (req,'List.html', {'records':rec})
 
+<<<<<<< HEAD
 def update(req,id):
     rec=models.AttendLogs.objects.get(id=id)
     if req.method=="POST":
@@ -60,3 +61,13 @@ def delete(req,id):
 
 
 
+=======
+print("_________________________________________________________________________________________________________________________")
+
+def update(req,id):
+  zeel rec=models.AttendLogs.object.get(id=id) 
+  if req.method=="POST ":
+     f=form.Attendance(req.POST) 
+     if f.d():
+        rec.empid=f.cleaned_data['empid']
+>>>>>>> 1355bb509d90fe5dbda2cb9a76ab723d5dd6a80a
