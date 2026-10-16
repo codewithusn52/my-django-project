@@ -4,7 +4,7 @@ from . import models
 # Create your views here.
 def create(req):
     if req.method=="POST":
-        f= forms.Attendance()
+        f= forms.Attendance(req.POST)
         if f.is_valid():
             models.AttendLogs.objects.create(
                 empid=f.cleaned_data['empid'],
@@ -14,14 +14,15 @@ def create(req):
                 intime=f.cleaned_data['intime'],
                 Action=f.cleaned_data['Action']
             )
-        else:
-            f = forms.Attendance()
-            return render(req,"insert.html",{'form':f})
+    else:
+        f = forms.Attendance()
+    
+    return render(req,"insert.html", {'form':f})
 
 
 def viewdata(req):
-    rec=models.AttendLogs.object.all()
-    return render (req,'List.html', {'records':rec})
+    rec=models.AttendLogs.objects.all()
+    return render (req,'List.html', {'record':rec})
 
 
 def update(req,id):

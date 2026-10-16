@@ -8,7 +8,7 @@
         <h2>>---------- Update the records--------</h2>
         <form method="post">
             {% csrf_token %} <!-- for security purpose-->
-            {{forms.as_p}} <!--Show form into webpage properly-->
+            {{form.as_p}} <!--Show form into webpage properly-->
             <input type="submit" value="Update"/>
         </form>
     </body>

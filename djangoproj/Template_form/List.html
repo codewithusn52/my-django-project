@@ -2,17 +2,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-<<<<<<< HEAD
     <title> view </title>
     </head>
     <body>
-        <h2>>---------- View the records--------</h2>
-=======
-    <title>view</title>
-    </head>
-    <body>
-      <h2>---------- View the records--------</h2>
->>>>>>> 1355bb509d90fe5dbda2cb9a76ab723d5dd6a80a
+        <h2>---------- View the records--------</h2>
+        <table border="2">
         <tr>
             <th> EMP ID: </th>
             <th> EMPLOYEE NAME: </th>
@@ -23,30 +17,23 @@
         {% for record in records %}
         <tr>
             <td>{{record.empid}}</td>
-            <td>{{record.fname}}</td>
-            <td>{{record.lname}}</td>
+            <td>{{record.fname}} {{record.lname}}</td>
+           
             <td>{{record.shifts}}</td>
             <td>{{record.intime}}</td>
             <td>{{record.action}}</td>
-            <td> <a href ="{% url "Update"record.id%}"> EDIT </a></td>
-            <td> <a href ="{% url "Delete"record.id%}"> DELETE </a></td>
+            <td> <a href ="{% url 'Update' record.id %}"> EDIT </a></td>
+            <td> <a href ="{% url 'Delete' record.id %}"> DELETE </a></td>
         </tr>
+        <!--</table>-->
         {% empty %}
-<<<<<<< HEAD
         <tr>
             <td colspan="8" style="text-align:center;"> NO RECORD TO DISPLAY </td>
         </tr>
-        {% endfor %}
         
+        {% endfor %}
+        </table>
     </body>
-    </html>
-=======
-        <tr><td colspan=" 5" style = "text-align:center;"> NO RECORD TO DISPLAY </td></tr>
-{ % endfor %} </table>
+</html>
 
-    </body>
-    </html>
-
-
->>>>>>> 1355bb509d90fe5dbda2cb9a76ab723d5dd6a80a
         

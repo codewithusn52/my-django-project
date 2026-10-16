@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path 
 from formAPI import views
+from . import views
 
-urlspattern=[
+urlpatterns=[
     path('admin/',admin.site.urls),
     path('insert/',views.create,name='create'),
     path('List/',views.viewdata,name='list'),

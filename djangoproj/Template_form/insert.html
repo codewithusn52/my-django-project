@@ -4,10 +4,11 @@
         <meta charset="utf-8" />
     </head>
         <title> Attendance Form </title>
-        <body><h1> Attendance Registration </h1>
+        <body>
+            <h1> Attendance Registration </h1>
             <form method="POST">
                 {% csrf_token %} <!-- for security purpose-->
-                {{forms.as_p}} <!--Show form into webpage properly-->
+                {{ form.as_p }} <!--Show form into webpage properly-->
                 <input type="submit" value="Submit"/>
             </form> 
 
